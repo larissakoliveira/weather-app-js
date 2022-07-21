@@ -1,0 +1,77 @@
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-align: center;
+    opacity: 0.9;
+    color: #fff;
+  }
+  
+  #app-card {
+    max-width: 50%;
+    margin: 0 auto;
+    background-color: #1a1b4b;
+    border-radius: 1em;
+    padding: 10px;
+  }
+  
+  .search-bar,
+  .search-btn {
+    margin: 1em 0;
+    border-radius: 0.5em;
+    padding: 5px;
+    font-size: 1rem;
+  }
+  
+  .search-btn {
+    cursor: pointer;
+    border: none;
+    transition: 0.5s ease-in;
+  }
+  
+  .search-btn:hover {
+    background-color: lightgray;
+  }
+  
+  .city-error {
+    color: #ff0000;
+    font-weight: bold;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .condition {
+    margin: 0;
+  }
+
+  .loading {
+    visibility: hidden;
+  }
+  
+  .loading:after {
+    visibility: visible;
+    content: "LOADING WEATHER...";
+    color: white;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  @media screen 
+  and (max-device-width: 600px) {
+    #app-card {
+      min-width: 85%;
+    }
+
+    .header {
+      flex-direction: column;
+    }
+  }
